@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+
+  .page-container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .content-wrap{
+    flex: 1;
+  }
+
+  .error-msg{
+    color:red;
+    font-size:small;
+  }
+
+  .custom-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+  
+  @media (max-width: 600px) {
+    .custom-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .custom-grid {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+  
+  .heading {
+    margin-bottom: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .popularity {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+  @media (max-width: 950px) {
+    .popularity {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .card-container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  @media (min-width: 600) {
+    .card-container {
+      width: 500;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .card-container {
+      width: 750px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .card-container {
+      width: 970px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .card-container {
+      width: 1170px;
+    }
+  }
+  
+  .popularity-item {
+    display: block;
+    max-width:700px;
+    min-width: 400px;
+    margin: auto;
+  }
+  .AddBtn {
+    color:white;
+    background-color: rgb(68, 196, 140);
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 4px;
+    height: 30px;
+    border:none;
+    cursor: pointer;
+  }
+  
+  .AddBtn:hover {
+    background-color: rgb(79, 224, 161);
+    transition: all 0.2s ease-out;
+  }
+  
+  .ctrl-btn {
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    border-radius: 4px;
+    text-shadow:rgb(0, 0, 0) 1px 1px 5px;
+    border-color: transparent;
+    transition: all 0.4s ease;
+    font-size: 1.25rem;
+    padding: 2px;
+    margin: 0;
+  }
+  
+  .ctrl-btn .small {
+    font-size: 1.1rem;
+    padding: 5px;
+  }
+  
+  .ctrl-btn:hover {
+    color: rgb(78, 223, 160);
+    text-shadow:rgb(255, 255, 255) 1px 1px 5px;
+    cursor: pointer;
+  }
