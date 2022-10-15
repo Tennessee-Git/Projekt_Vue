@@ -1,0 +1,103 @@
+<template>
+  <div class="room-card">
+    <div class="room-details">
+      <div class="room-label">{{ label }}</div>
+      <div class="room-capacity">Pojemność: {{ capacity }} osób</div>
+    </div>
+    <div class="overlay">
+      <div class="inner-card-controls">
+        <router-link :to="{ name: 'editRoom', params: { id: this.id } }">
+          <button class="ctrl-btn">
+            <i class="far fa-edit"></i>
+          </button>
+        </router-link>
+        <button class="ctrl-btn" @click="$emit('delete-room', id)">
+          <i class="far fa-trash-alt"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "RoomDetails",
+  props: {
+    id: Number,
+    label: String,
+    value: Number,
+    capacity: Number,
+  },
+};
+</script>
+
+<style scoped>
+.room-card {
+  width: 200px;
+  height: 120px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  border: 0;
+  display: block;
+  font-weight: bold;
+}
+
+.room-card .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 94%;
+  height: 92%;
+  border: 5px solid transparent;
+  transition: all 0.4s ease;
+}
+
+.room-card:hover .overlay {
+  border: 5px solid rgb(68, 196, 140);
+}
+
+.room-details {
+  display: block;
+  text-align: center;
+  justify-content: center;
+  background-color: rgb(167, 236, 206);
+  width: 200px;
+  height: 250px;
+}
+
+.room-label {
+  text-shadow: rgb(0, 0, 0) 1px 1px 5px;
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  text-align: center;
+  position: absolute;
+  bottom: 70px;
+  left: 5px;
+  width: 190px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.room-capacity {
+  text-shadow: rgb(0, 0, 0) 1px 1px 5px;
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  text-align: center;
+  position: absolute;
+  bottom: 35px;
+  left: 5px;
+  width: 190px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.inner-card-controls {
+  opacity: 0;
+}
+
+.room-card:hover .inner-card-controls {
+  opacity: 1;
+  transition: all 0.4s ease;
+}
+</style>

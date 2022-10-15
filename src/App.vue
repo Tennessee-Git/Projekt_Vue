@@ -1,6 +1,5 @@
 <template>
-  
-  <div class="peage-container">
+  <div class="page-container">
     <Navbar />
     <div class="content-wrap">
       <router-view />
@@ -10,17 +9,16 @@
 </template>
 
 <script>
-import Navbar from './components/Navbar.vue'
-import Footer from './components/Footer.vue'
+import Navbar from "./components/Navbar.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     Navbar,
     Footer,
-  }
-}
+  },
+};
 </script>
 
-<style >
-</style>
+<style></style>
