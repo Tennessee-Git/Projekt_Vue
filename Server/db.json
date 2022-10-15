@@ -1,0 +1,132 @@
+{
+  "rooms": [
+    {
+      "id": 1,
+      "label": "Sala 1",
+      "value": 1,
+      "capacity": 90
+    },
+    {
+      "id": 2,
+      "label": "Sala 2",
+      "value": 2,
+      "capacity": 100
+    },
+    {
+      "id": 3,
+      "label": "Sala 3",
+      "value": 3,
+      "capacity": 80
+    },
+    {
+      "id": 4,
+      "label": "Sala 4",
+      "value": 4,
+      "capacity": 90
+    },
+    {
+      "id": 5,
+      "label": "Sala 5",
+      "value": 5,
+      "capacity": 110
+    },
+    {
+      "id": 6,
+      "label": "Sala 6",
+      "value": 6,
+      "capacity": 80
+    },
+    {
+      "id": 7,
+      "label": "Sala 7",
+      "value": 7,
+      "capacity": 90
+    },
+    {
+      "id": 8,
+      "label": "Sala 8",
+      "value": 8,
+      "capacity": 100
+    },
+    {
+      "id": 9,
+      "label": "Sala 9",
+      "value": 9,
+      "capacity": 90
+    },
+    {
+      "id": 10,
+      "label": "Sala 10",
+      "value": 10,
+      "capacity": 90
+    }
+  ],
+  "movies": [
+    {
+      "title": "Test1",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB_w97DRzLt2NKJP-7ypiIi4GshyMz8WM3Fym6EV88IhuiFAvit_ghqp4B3_gPHlNhWtQ&usqp=CAU",
+      "length": 104,
+      "label": "Test1",
+      "popularity": 0,
+      "value": 1,
+      "id": 1
+    },
+    {
+      "title": "test2",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB_w97DRzLt2NKJP-7ypiIi4GshyMz8WM3Fym6EV88IhuiFAvit_ghqp4B3_gPHlNhWtQ&usqp=CAU",
+      "length": 125,
+      "label": "test2",
+      "value": 2,
+      "popularity": 0,
+      "id": 2
+    },
+    {
+      "title": "test3",
+      "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB_w97DRzLt2NKJP-7ypiIi4GshyMz8WM3Fym6EV88IhuiFAvit_ghqp4B3_gPHlNhWtQ&usqp=CAU",
+      "length": 125,
+      "label": "test2",
+      "value": 3,
+      "popularity": 0,
+      "id": 3
+    }
+  ],
+  "showings": [
+    {
+      "date": "05-12-2021 16:30",
+      "movieId": 1,
+      "roomId": 1,
+      "movieTitle": "Test1",
+      "availableSeats": 90,
+      "seatsTaken": [],
+      "id": 23
+    },
+    {
+      "date": "05-12-2021 17:00",
+      "movieId": 2,
+      "roomId": 1,
+      "movieTitle": "test2",
+      "availableSeats": 90,
+      "seatsTaken": [],
+      "id": 24
+    },
+    {
+      "date": "05-12-2021 17:00",
+      "movieId": 2,
+      "roomId": 7,
+      "movieTitle": "test2",
+      "availableSeats": 90,
+      "seatsTaken": [],
+      "id": 25
+    },
+    {
+      "date": "01-07-2022 09:03",
+      "movieId": 1,
+      "roomId": 2,
+      "movieTitle": "Test1",
+      "availableSeats": 100,
+      "seatsTaken": [],
+      "id": 26
+    }
+  ],
+  "reservations": []
+}

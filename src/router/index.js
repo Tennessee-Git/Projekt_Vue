@@ -3,6 +3,10 @@ import HomeView from "../views/HomeView.vue";
 import MoviesView from "../views/MoviesView.vue";
 import ShowingsView from "../views/ShowingsView.vue";
 import RoomsView from "../views/RoomsView.vue";
+import EditMovieForm from "../components/forms/EditMovieForm.vue";
+import EditShowingForm from "../components/forms/EditShowingForm.vue";
+import EditRoomForm from "../components/forms/EditRoomForm.vue";
+import ReservationForm from "../components/forms/ReservationForm.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,6 +30,26 @@ const router = createRouter({
       path: "/Sale",
       name: "rooms",
       component: RoomsView,
+    },
+    {
+      path: "/EdytujFilm/:id",
+      name: "editMovie",
+      component: EditMovieForm,
+    },
+    {
+      path: "/EdytujSeans/:id",
+      name: "editShowing",
+      component: EditShowingForm,
+    },
+    {
+      path: "/EdytujSale/:id",
+      name: "editRoom",
+      component: EditRoomForm,
+    },
+    {
+      path: "/Rezerwuj/:id",
+      name: "reservation",
+      component: ReservationForm,
     },
   ],
 });

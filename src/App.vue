@@ -13,8 +13,6 @@
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
 
-import './assets/style.css'
-
 export default {
   name: 'App',
   components: {

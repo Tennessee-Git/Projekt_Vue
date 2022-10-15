@@ -1,6 +1,6 @@
 <template>
     <nav class="navbarItems">
-        <h1 class="navbar-logo">CinemApp</h1>
+        <h1 class="navbar-logo">CinemApp<i class="fas fa-film"></i></h1>
         <ul class="nav-menu">
             <router-link class="nav-links" to="/">Strona główna</router-link>
             <router-link class="nav-links" to="/Seanse">Seanse</router-link>
