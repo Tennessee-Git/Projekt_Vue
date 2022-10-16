@@ -4,8 +4,8 @@
     <div class="content-wrap">
       <router-view />
     </div>
+    <Footer />
   </div>
-  <Footer />
 </template>
 
 <script>

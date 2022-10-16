@@ -81,9 +81,9 @@ body {
     }
   }
   
-  @media (min-width: 1400px) {
+  @media (min-width: 1250px) {
     .card-container {
-      width: 1300px;
+      width: 1200px;
     }
   }
   
@@ -107,6 +107,10 @@ body {
   .AddBtn:hover {
     background-color: rgb(79, 224, 161);
     transition: all 0.2s ease-out;
+  }
+
+  .FormButton {
+    width: fit-content;
   }
   
   .ctrl-btn {
@@ -183,17 +187,6 @@ input::placeholder {
     font-size: 1.2em;
     font-weight: lighter;
     color: #999;
-}
-
-.inline-images{
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 15px;
-    width: 100%;
-}
-
-.inline-image{
-    margin-right: 20px;
 }
 
 .fit-link {

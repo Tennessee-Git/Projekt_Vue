@@ -1,15 +1,16 @@
 <template>
   <div class="heading">
-    <br />
     <h1>Lista filmów:</h1>
     <button class="AddBtn">Dodaj film</button>
   </div>
+  <!-- <AddMovieForm @add-movie="addMovie" /> -->
   <MoviesList @delete-movie="deleteMovieFunction" :movies="this.movies" />
 </template>
 
 <script>
 import { getMovies, deleteMovie } from "../api.js";
 import MoviesList from "../components/movie-components/MoviesList.vue";
+import AddMovieForm from "../components/forms/AddMovieForm.vue";
 
 export default {
   name: "MoviesView",
@@ -40,9 +41,10 @@ export default {
       // console.log(this.movies);
     },
     addMovie(movie) {
+      // console.log("Movie to add: ", movie);
       this.movies = [...this.movies, movie];
     },
   },
-  components: { MoviesList },
+  components: { MoviesList, AddMovieForm },
 };
 </script>

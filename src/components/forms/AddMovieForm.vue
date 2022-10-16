@@ -1,15 +1,13 @@
 <template>
   <div class="form-wrapper">
     <h2>Wpisz informacje o filmie</h2>
-    <br />
     <form @submit.prevent="handleSubmit">
       <div class="form-inputs">
         <label>Tytuł:</label>
         <input
+          v-model="title"
           required
-          oninvalid="this.setCustomValidity('Tytuł filmu musi mieć co najmniej 5 znaków!')"
           minlength="5"
-          pattern=".*\S+.*"
           id="titleInput"
           name="title"
           type="text"
@@ -19,20 +17,26 @@
       <div class="form-inputs">
         <label>Link do plakatu:</label>
         <input
+          v-model="imageURL"
           required
-          pattern="https://.*"
-          oninvalid="this.setCustomValidity('Podaj poprawny link do plakatu!')"
           id="imageURLInput"
           name="imageURL"
           type="url"
           placeholder="Podaj link do plakatu"
         />
       </div>
+      <img
+        v-show="imageURL !== ''"
+        :src="imageURL"
+        width="200"
+        height="250"
+        alt="Podgląd plakatu"
+      />
       <div class="form-inputs">
         <label>Długość(min):</label>
         <input
+          v-model="length"
           required
-          oninvalid="this.setCustomValidity('Długość filmu musi być w zakresie 30-300 minut!')"
           min="30"
           max="300"
           id="lengthInput"
@@ -41,38 +45,41 @@
           placeholder="Podaj długość filmu (w minutach)"
         />
       </div>
+      <button class="AddBtn" type="submit">Dodaj</button>
     </form>
-    <img
-      v-if="imageURL"
-      :src="imageURL"
-      width="200px"
-      height="250px"
-      alt="Podgląd plakatu"
-    />
-    <br />
-    <button class="AddBtn" type="submit">Dodaj</button>
   </div>
 </template>
 
 <script>
+import { addMovie, getMovieCount } from "../../api";
+
 export default {
   name: "AddMovieForm",
   data() {
     return {
       title: "",
       imageURL: "",
-      length: 0,
+      length: null,
+      value: 0,
     };
   },
+  async created() {
+    this.value = (await getMovieCount()) + 1;
+  },
   methods: {
-    handleSubmit(event) {
-      const { title, imageURL, length } = Object.fromEntries(
-        new FormData(event.target)
-      );
-      this.title = title;
-      this.imageURL = imageURL;
-      this.length = length;
+    handleSubmit() {
       console.log(this.title, this.imageURL, this.length);
+      let newMovie = {
+        id: this.value,
+        title: this.title,
+        imageURL: this.imageURL,
+        length: this.length,
+        label: this.title,
+        value: this.value,
+        popularity: 0,
+      };
+      addMovie(newMovie);
+      this.$emit("add-movie", newMovie);
     },
   },
 };
