@@ -59,6 +59,12 @@
       "label": "Sala 10",
       "value": 10,
       "capacity": 90
+    },
+    {
+      "id": 11,
+      "label": "Sala 11",
+      "value": 11,
+      "capacity": 123
     }
   ],
   "movies": [
@@ -137,32 +143,98 @@
       "id": 23
     },
     {
-      "date": "05-12-2021 17:00",
-      "movieId": 2,
-      "roomId": 1,
+      "date": "16-10-2022 09:00",
       "movieTitle": "test2",
-      "availableSeats": 90,
-      "seatsTaken": [],
-      "id": 24
-    },
-    {
-      "date": "05-12-2021 17:00",
       "movieId": 2,
       "roomId": 7,
-      "movieTitle": "test2",
-      "availableSeats": 90,
-      "seatsTaken": [],
-      "id": 25
+      "id": 25,
+      "availableSeats": 86,
+      "seatsTaken": [
+        "B-3",
+        "I-10",
+        "B-4"
+      ]
     },
     {
-      "date": "01-07-2022 09:03",
-      "movieId": 1,
-      "roomId": 2,
-      "movieTitle": "Test1",
-      "availableSeats": 100,
+      "date": "18-10-2022 17:17",
+      "movieId": 6,
+      "roomId": 3,
+      "movieTitle": "test1234",
+      "availableSeats": 80,
       "seatsTaken": [],
-      "id": 26
+      "id": 27
+    },
+    {
+      "date": "18-10-2022 19:17",
+      "movieId": 6,
+      "roomId": 5,
+      "movieTitle": "test1234",
+      "availableSeats": 109,
+      "seatsTaken": [
+        "A-5"
+      ],
+      "id": 28
+    },
+    {
+      "date": "16-10-2022 16:00",
+      "movieTitle": "Test1",
+      "movieId": 1,
+      "roomId": 1,
+      "id": 29,
+      "availableSeats": 88,
+      "seatsTaken": [
+        "A-6"
+      ]
     }
   ],
-  "reservations": []
+  "reservations": [
+    {
+      "name": "test",
+      "lastName": "test123",
+      "email": "test@gmail.com",
+      "seansId": 28,
+      "seatCode": "A-5",
+      "id": 1
+    },
+    {
+      "name": "test",
+      "lastName": "test123",
+      "email": "test@gmail.com",
+      "seansId": 25,
+      "seatCode": "B-3",
+      "id": 2
+    },
+    {
+      "name": "Paweł",
+      "lastName": "Awramiuk",
+      "email": "awramiukofficial@gmail.com",
+      "seansId": 25,
+      "seatCode": "I-10",
+      "id": 3
+    },
+    {
+      "name": "Paweł",
+      "lastName": "Awramiuk",
+      "email": "awramiukofficial@gmail.com",
+      "seansId": 25,
+      "seatCode": "B-4",
+      "id": 4
+    },
+    {
+      "name": "Paweł",
+      "lastName": "Awramiuk",
+      "email": "awramiukofficial@gmail.com",
+      "seansId": 24,
+      "seatCode": "A-5",
+      "id": 5
+    },
+    {
+      "name": "Paweł",
+      "lastName": "Awramiuk",
+      "email": "awramiukofficial@gmail.com",
+      "seansId": 29,
+      "seatCode": "A-6",
+      "id": 6
+    }
+  ]
 }

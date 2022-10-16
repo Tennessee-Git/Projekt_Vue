@@ -1,24 +1,28 @@
 <template>
-    <nav class="navbarItems">
-        <h1 class="navbar-logo">CinemApp<i class="fas fa-film"></i></h1>
-        <ul class="nav-menu">
-            <router-link class="nav-links" to="/">Strona główna</router-link>
-            <router-link class="nav-links" to="/Seanse">Seanse</router-link>
-            <router-link class="nav-links" to="/Filmy">Filmy</router-link>
-            <router-link class="nav-links" to="/Sale">Sale</router-link>
-        </ul>
-    </nav>
+  <nav class="navbarItems">
+    <h1 class="navbar-logo">CinemApp<i class="fas fa-film"></i></h1>
+    <ul class="nav-menu">
+      <router-link class="nav-links" to="/">Strona główna</router-link>
+      <router-link class="nav-links" to="/Seanse">Seanse</router-link>
+      <router-link class="nav-links" to="/Filmy">Filmy</router-link>
+      <router-link class="nav-links" to="/Sale">Sale</router-link>
+    </ul>
+  </nav>
 </template>
 
 <script>
 export default {
-    name: 'Navbar'
-}
+  name: "Navbar",
+};
 </script>
 
 <style scoped>
 .navbarItems {
-  background: linear-gradient(90deg, rgb(63, 185, 132) 0%, rgb(68, 196, 140) 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(63, 185, 132) 0%,
+    rgb(68, 196, 140) 100%
+  );
   height: 70px;
   display: flex;
   justify-content: center;
@@ -30,7 +34,7 @@ export default {
   color: #fff;
   justify-self: start;
   margin-left: 20px;
-  cursor:default;
+  cursor: default;
 }
 
 .fa-film {
@@ -50,7 +54,7 @@ export default {
 }
 
 .nav-links {
-  color:#fff;
+  color: #fff;
   text-decoration: none;
   padding: 0.5rem 1rem;
 }
@@ -62,7 +66,7 @@ export default {
 }
 
 .fa-bars {
-  color:#fff;
+  color: #fff;
 }
 
 .menu-icon {
@@ -71,14 +75,14 @@ export default {
 
 @media screen and (max-width: 900px) {
   .NavbarItems {
-  font-size: 1rem;
+    font-size: 1rem;
   }
 
   .navbar-logo {
-      position: absolute;
-      top: 0;
-      left: 0;
-      transform:  translate(0%, 20%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(0%, 20%);
   }
 
   .fa-film {
