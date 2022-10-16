@@ -90,7 +90,7 @@ export default {
     handleSubmit() {
       console.log(this.title, this.imageURL, this.length);
       let movie2Edit = {
-        id: this.$route.params.id,
+        id: this.oldMovie.id,
         title:
           this.title !== this.oldMovie.title && this.title !== ""
             ? this.title
@@ -105,7 +105,7 @@ export default {
             : this.oldMovie.length,
         label:
           this.title !== this.oldMovie.title ? this.title : this.oldMovie.title,
-        value: this.$route.params.id,
+        value: Number(this.$route.params.id),
         popularity: this.oldMovie.popularity,
       };
       editMovie(movie2Edit);

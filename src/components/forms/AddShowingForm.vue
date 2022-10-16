@@ -3,6 +3,9 @@
     <form @submit.prevent="handleSubmit">
       <div class="form-inputs">
         <label>Film:</label>
+        <select name="" id="">
+          <option value=""></option>
+        </select>
       </div>
       <div class="form-inputs">
         <label>Sala:</label>
@@ -24,6 +27,13 @@ export default {
     return {
       date: Date,
     };
+  },
+  methods: {
+    handleSubmit() {
+      let newShowing = {
+        date: this.date,
+      };
+    },
   },
 };
 </script>

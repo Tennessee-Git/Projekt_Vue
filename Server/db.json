@@ -10,7 +10,7 @@
       "id": 2,
       "label": "Sala 2",
       "value": 2,
-      "capacity": 100
+      "capacity": 101
     },
     {
       "id": 3,
@@ -78,10 +78,10 @@
       "id": 1
     },
     {
-      "title": "test2",
+      "title": "test22",
       "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB_w97DRzLt2NKJP-7ypiIi4GshyMz8WM3Fym6EV88IhuiFAvit_ghqp4B3_gPHlNhWtQ&usqp=CAU",
       "length": 125,
-      "label": "test2",
+      "label": "test22",
       "value": 2,
       "popularity": 0,
       "id": 2
@@ -128,7 +128,7 @@
       "imageURL": "https://przedszkole.doruchow.pl/wp-content/uploads/2017/08/test.png",
       "length": 44,
       "label": "test12345",
-      "value": 7,
+      "value": "7",
       "popularity": 0
     }
   ],
