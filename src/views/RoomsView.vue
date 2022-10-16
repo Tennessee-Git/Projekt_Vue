@@ -4,12 +4,14 @@
     <h1>Lista sal kinowych:</h1>
     <button class="AddBtn">Dodaj salę</button>
   </div>
+  <!-- <AddRoomForm @add-room="addRoom" /> -->
   <RoomsList @delete-room="deleteRoomFunction" :rooms="this.rooms" />
 </template>
 
 <script>
 import { deleteRoom, getRooms } from "../api";
 import RoomsList from "../components/room-components/RoomsList.vue";
+import AddRoomForm from "../components/forms/AddRoomForm.vue";
 
 export default {
   name: "RoomsView",
@@ -42,6 +44,6 @@ export default {
       this.rooms = [...this.rooms, room];
     },
   },
-  components: { RoomsList },
+  components: { RoomsList, AddRoomForm },
 };
 </script>

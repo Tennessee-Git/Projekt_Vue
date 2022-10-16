@@ -1,6 +1,6 @@
 <template>
   <div class="form-wrapper">
-    <h2>Wpisz informacje o filmie</h2>
+    <h2>Edytuj informacje o filmie</h2>
     <br />
     <form @submit.prevent="handleSubmit">
       <div class="form-inputs">
@@ -52,7 +52,7 @@
           placeholder="Podaj długość filmu (w minutach)"
         />
       </div>
-      <button class="AddBtn FormButton" type="submit">Dodaj</button>
+      <button class="AddBtn FormButton" type="submit">Edytuj</button>
     </form>
   </div>
 </template>
