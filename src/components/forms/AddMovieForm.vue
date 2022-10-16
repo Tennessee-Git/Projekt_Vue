@@ -45,7 +45,7 @@
           placeholder="Podaj długość filmu (w minutach)"
         />
       </div>
-      <button class="AddBtn" type="submit">Dodaj</button>
+      <button class="AddBtn FormButton" type="submit">Dodaj</button>
     </form>
   </div>
 </template>

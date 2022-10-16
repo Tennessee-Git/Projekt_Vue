@@ -4,6 +4,7 @@
     <h1>Lista seansów:</h1>
     <button class="AddBtn">Dodaj seans</button>
   </div>
+  <AddShowingForm />
   <ShowingsList
     @delete-showing="deleteShowingFunction"
     :showings="this.showings"
@@ -13,6 +14,7 @@
 <script>
 import { deleteShowing, getShowings } from "../api";
 import ShowingsList from "../components/showing-components/ShowingsList.vue";
+import AddShowingForm from "../components/forms/AddShowingForm.vue";
 export default {
   name: "ShowingsView",
   data() {
@@ -43,6 +45,6 @@ export default {
       this.showings = [...this.showings, showing];
     },
   },
-  components: { ShowingsList },
+  components: { ShowingsList, AddShowingForm },
 };
 </script>
