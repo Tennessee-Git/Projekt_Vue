@@ -119,6 +119,7 @@ export default {
 .inline-images {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   margin-bottom: 15px;
   width: 100%;
 }
