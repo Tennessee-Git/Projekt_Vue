@@ -3,7 +3,7 @@
     <h1>Lista sal kinowych:</h1>
     <button class="AddBtn">Dodaj salę</button>
   </div>
-  <!-- <AddRoomForm @add-room="addRoom" /> -->
+  <AddRoomForm @add-room="addRoom" />
   <RoomsList @delete-room="deleteRoomFunction" :rooms="this.rooms" />
 </template>
 

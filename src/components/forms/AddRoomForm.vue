@@ -3,8 +3,9 @@
     <h2>Podaj pojemność nowej sali</h2>
     <form @submit.prevent="handleSubmit">
       <div class="form-inputs">
-        <label>Pojemność:</label>
+        <label class="customLabel">Pojemność:</label>
         <input
+          class="customInput"
           v-model="capacity"
           required
           id="capacity"

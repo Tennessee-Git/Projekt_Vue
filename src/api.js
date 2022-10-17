@@ -9,13 +9,11 @@ export const getMovies = async () => {
   return response.data;
 };
 
-export const getMovieCount = async () => {
+export const getNextMovieId = async () => {
   const response = await axios.get("/movies");
-  let data = response.data;
-  console.log(data);
-  let number = data.length;
-  console.log(number);
-  return number;
+  let data = Array.from(response.data);
+  data.sort((a, b) => (a.id > b.id ? 1 : -1));
+  return data[data.length - 1].id + 1;
 };
 
 export const addMovie = (new_movie) => {
@@ -78,6 +76,13 @@ export const getMovieById = (id) => {
 export const getShowings = async () => {
   const response = await axios.get("/showings");
   return response.data;
+};
+
+export const getNextShowingId = async () => {
+  const response = await axios.get("/showings");
+  let data = Array.from(response.data);
+  data.sort((a, b) => (a.id > b.id ? 1 : -1));
+  return data[data.length - 1].id + 1;
 };
 
 export const addShowing = (new_showing) => {
@@ -174,6 +179,13 @@ export const deleteShowing = (id) => {
 export const getRooms = async () => {
   const response = await axios.get("/rooms");
   return response.data;
+};
+
+export const getNextRoomId = async () => {
+  const response = await axios.get("/rooms");
+  let data = Array.from(response.data);
+  data.sort((a, b) => (a.id > b.id ? 1 : -1));
+  return data[data.length - 1].id + 1;
 };
 
 export const getRoomById = (id) => {

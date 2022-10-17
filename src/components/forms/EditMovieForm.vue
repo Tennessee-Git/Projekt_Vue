@@ -4,8 +4,9 @@
     <br />
     <form @submit.prevent="handleSubmit">
       <div class="form-inputs">
-        <label>Aktualny tytuł: {{ oldMovie.title }}</label>
+        <label class="customLabel">Aktualny tytuł: {{ oldMovie.title }}</label>
         <input
+          class="customInput"
           v-model="title"
           minlength="5"
           id="titleInput"
@@ -15,8 +16,9 @@
         />
       </div>
       <div class="form-inputs">
-        <label>Link do plakatu:</label>
+        <label class="customLabel">Link do plakatu:</label>
         <input
+          class="customInput"
           v-model="imageURL"
           id="imageURLInput"
           name="imageURL"
@@ -41,8 +43,11 @@
         />
       </div>
       <div class="form-inputs">
-        <label>Aktualna długość(min): {{ oldMovie.length }}</label>
+        <label class="customLabel"
+          >Aktualna długość(min): {{ oldMovie.length }}</label
+        >
         <input
+          class="customInput"
           v-model="length"
           min="30"
           max="300"

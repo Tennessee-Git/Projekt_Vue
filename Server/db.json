@@ -130,6 +130,15 @@
       "label": "test12345",
       "value": 7,
       "popularity": 0
+    },
+    {
+      "id": 8,
+      "title": "nowyfilm",
+      "imageURL": "https://i.ebayimg.com/images/g/zK4AAOSw3b9cjJz0/s-l400.jpg",
+      "length": 123,
+      "label": "nowyfilm",
+      "value": 8,
+      "popularity": 0
     }
   ],
   "showings": [
@@ -185,6 +194,15 @@
       "seatsTaken": [
         "A-6"
       ]
+    },
+    {
+      "date": "18-10-2022 16:17",
+      "movieId": 3,
+      "roomId": 3,
+      "movieTitle": "test3",
+      "availableSeats": 80,
+      "seatsTaken": [],
+      "id": 30
     }
   ],
   "reservations": [

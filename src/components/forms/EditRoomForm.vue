@@ -3,8 +3,11 @@
     <h2>Edytuj informacje o sali</h2>
     <form @submit.prevent="handleSubmit">
       <div class="form-inputs">
-        <label>Aktualna pojemność: {{ this.oldRoom.capacity }}</label>
+        <label class="customLabel"
+          >Aktualna pojemność: {{ this.oldRoom.capacity }}</label
+        >
         <input
+          class="customInput"
           v-model="capacity"
           id="capacity"
           min="30"
