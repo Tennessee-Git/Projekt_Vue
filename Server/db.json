@@ -10,7 +10,7 @@
       "id": 2,
       "label": "Sala 2",
       "value": 2,
-      "capacity": 101
+      "capacity": 100
     },
     {
       "id": 3,
@@ -152,11 +152,11 @@
       "id": 23
     },
     {
-      "date": "16-10-2022 09:00",
-      "movieTitle": "test2",
-      "movieId": 2,
-      "roomId": 7,
       "id": 25,
+      "date": "16-10-2022 09:00",
+      "movieId": 4,
+      "roomId": 7,
+      "movieTitle": "123456",
       "availableSeats": 86,
       "seatsTaken": [
         "B-3",

@@ -34,7 +34,7 @@
           required
           v-model="date"
           type="datetime-local"
-          min="2022-10-17T08:30"
+          :min="startDate"
           name="date"
           id="date"
         />
@@ -45,17 +45,17 @@
 </template>
 
 <script>
-import { addShowing, getMovies, getRooms } from "../../api";
+import { addShowing, getMovies, getNextShowingId, getRooms } from "../../api";
 import moment from "moment";
 
 export default {
   name: "AddShowingForm",
   data() {
     return {
-      startDate: moment().format("YYYY-MM-DDTHH:mm"),
+      startDate: String(moment().format("YYYY-MM-DDTHH:mm")),
       date: "",
-      selectedMovie: "",
-      selectedRoom: "",
+      selectedMovie: {},
+      selectedRoom: {},
       movies: [],
       rooms: [],
       id: 0,
@@ -66,10 +66,13 @@ export default {
     this.movies = resM;
     const resR = await getRooms();
     this.rooms = resR;
+    const id = await getNextShowingId();
+    this.id = id;
   },
   methods: {
     handleSubmit() {
       let newShowing = {
+        id: this.id,
         date: moment(this.date).format("DD-MM-YYYY HH:mm"),
         movieId: this.selectedMovie.id,
         roomId: this.selectedRoom.id,
@@ -78,7 +81,7 @@ export default {
         seatsTaken: [],
       };
       console.log("Showing to add", newShowing);
-      console.error(this.startDate, typeof this.startDate);
+      // console.error(this.startDate, typeof this.startDate);
       addShowing(newShowing);
       this.$emit("add-showing", newShowing);
     },
