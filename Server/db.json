@@ -194,15 +194,6 @@
       "seatsTaken": [
         "A-6"
       ]
-    },
-    {
-      "date": "18-10-2022 16:17",
-      "movieId": 3,
-      "roomId": 3,
-      "movieTitle": "test3",
-      "availableSeats": 80,
-      "seatsTaken": [],
-      "id": 30
     }
   ],
   "reservations": [

@@ -9,6 +9,7 @@
           :movieTitle="showing.movieTitle"
           :roomId="showing.roomId"
           :availableSeats="showing.availableSeats"
+          :showDelete="true"
         />
       </div>
     </div>
