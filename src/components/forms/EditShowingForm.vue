@@ -34,7 +34,7 @@
           id="date"
         />
       </div>
-      <button class="AddBtn FormButton">Edytuj</button>
+      <button type="submit" class="AddBtn FormButton">Edytuj</button>
     </form>
   </div>
 </template>

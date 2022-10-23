@@ -39,7 +39,7 @@
           id="date"
         />
       </div>
-      <button class="AddBtn FormButton">Dodaj</button>
+      <button class="AddBtn FormButton" type="submit">Dodaj</button>
     </form>
   </div>
 </template>

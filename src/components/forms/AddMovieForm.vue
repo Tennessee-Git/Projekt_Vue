@@ -79,7 +79,6 @@ export default {
         length: this.length,
         label: this.title,
         value: this.id,
-        popularity: 0,
       };
       addMovie(newMovie);
       this.$emit("add-movie", newMovie);
