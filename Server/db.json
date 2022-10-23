@@ -143,13 +143,13 @@
   ],
   "showings": [
     {
-      "date": "05-12-2021 16:30",
+      "id": 23,
+      "date": "25-10-2022 13:10",
       "movieId": 1,
       "roomId": 1,
       "movieTitle": "Test1",
       "availableSeats": 90,
-      "seatsTaken": [],
-      "id": 23
+      "seatsTaken": []
     },
     {
       "id": 25,
@@ -179,9 +179,10 @@
       "movieId": 6,
       "roomId": 5,
       "movieTitle": "test1234",
-      "availableSeats": 109,
+      "availableSeats": 108,
       "seatsTaken": [
-        "A-5"
+        "A-5",
+        "A-4"
       ],
       "id": 28
     },
@@ -253,6 +254,14 @@
       "showingId": 25,
       "seatCode": "A-1",
       "id": 7
+    },
+    {
+      "name": "Paweł",
+      "lastName": "Awramiuk",
+      "email": "awramiukofficial@gmail.com",
+      "showingId": 28,
+      "seatCode": "A-4",
+      "id": 8
     }
   ]
 }

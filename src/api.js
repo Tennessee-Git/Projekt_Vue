@@ -146,6 +146,23 @@ export const getShowingsNow = async () => {
   return output;
 };
 
+export const filterShowingsNow = (showings) => {
+  const now = moment();
+  let output = [];
+  showings.forEach((showing) => {
+    if (moment(showing.date, "DD-MM-YYYY HH:mm").isSameOrAfter(now))
+      output.push(showing);
+  });
+  output.sort((a, b) =>
+    moment(a.date, "DD-MM-YYYY HH:mm").isSameOrAfter(
+      moment(b.date, "DD-MM-YYYY HH:mm")
+    )
+      ? 1
+      : -1
+  );
+  return output;
+};
+
 export const getShowingsFromLast7Days = async () => {
   const response = await axios.get("/showings");
   let showings = response.data;
@@ -153,6 +170,18 @@ export const getShowingsFromLast7Days = async () => {
   const before = moment(now).subtract(7, "d");
   // console.log('NOW:', now.format('DD-MM-YYYY HH:mm'));
   // console.log('BEFORE', before.format('DD-MM-YYYY HH:mm'));
+  let output = [];
+  showings.forEach((showing) => {
+    if (moment(showing.date, "DD-MM-YYYY HH:mm").isBetween(before, now)) {
+      output.push(showing);
+    }
+  });
+  return output;
+};
+
+export const filterShowingsFromLast7Days = (showings) => {
+  const now = moment(new Date());
+  const before = moment(now).subtract(7, "d");
   let output = [];
   showings.forEach((showing) => {
     if (moment(showing.date, "DD-MM-YYYY HH:mm").isBetween(before, now)) {
