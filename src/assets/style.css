@@ -45,8 +45,8 @@ code {
 
 .popularity {
   display: flex;
-  align-items: center;
   justify-content: center;
+  vertical-align: top;
   gap: 50px;
 }
 @media (max-width: 950px) {
@@ -89,8 +89,9 @@ code {
 .popularity-item {
   display: block;
   max-width: 700px;
-  min-width: 400px;
+  min-width: 500px;
   margin: auto;
+  text-align: center;
 }
 .AddBtn {
   color: white;

@@ -196,6 +196,17 @@
       "seatsTaken": [
         "A-6"
       ]
+    },
+    {
+      "id": 30,
+      "date": "22-10-2022 16:51",
+      "movieId": 2,
+      "roomId": 9,
+      "movieTitle": "test2",
+      "availableSeats": 89,
+      "seatsTaken": [
+        "A-3"
+      ]
     }
   ],
   "reservations": [
@@ -262,6 +273,14 @@
       "showingId": 28,
       "seatCode": "A-4",
       "id": 8
+    },
+    {
+      "name": "Paweł",
+      "lastName": "Awramiuk",
+      "email": "awramiukofficial@gmail.com",
+      "showingId": 30,
+      "seatCode": "A-3",
+      "id": 9
     }
   ]
 }

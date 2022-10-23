@@ -1,7 +1,16 @@
 <template>
   <div>
     <h2 class="heading">Tabela popularności filmów:</h2>
-    <div class="popularity-item"></div>
+    <table>
+      <tr>
+        <th>Tytuł filmu</th>
+        <th>Ilość sprzedanych biletów</th>
+      </tr>
+      <tr v-for="data of tableData">
+        <td>{{ data.movieTitle }}</td>
+        <td>{{ data.ticketCount }}</td>
+      </tr>
+    </table>
   </div>
 </template>
 
@@ -39,3 +48,24 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+table {
+  max-width: 700px;
+  min-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  border-collapse: collapse;
+  border-style: hidden;
+}
+table th {
+  width: 50%;
+  padding: 10px;
+  background-color: rgb(68, 196, 140);
+  border: 1px solid rgba(212, 212, 212, 0.9);
+}
+table td {
+  padding: 10px;
+  border: 1px solid rgba(212, 212, 212, 0.9);
+}
+</style>

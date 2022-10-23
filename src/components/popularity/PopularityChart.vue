@@ -54,7 +54,7 @@ export default {
             label: "Ilość sprzedanych biletów z ostatnich 7 dni",
             data: values,
             borderColor: "rgb(102, 99, 139)",
-            backgroundColor: "rgb(51, 150, 107)",
+            backgroundColor: "rgb(68, 196, 140)",
           },
         ],
       };

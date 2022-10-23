@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import { filterShowingsNow, getShowingsNow } from "../api";
+import { getShowingsNow } from "../api";
 import ShowingsList from "../components/showing-components/ShowingsList.vue";
 import ShowingDetails from "../components/showing-components/ShowingDetails.vue";
 import PopularityChart from "../components/popularity/PopularityChart.vue";
