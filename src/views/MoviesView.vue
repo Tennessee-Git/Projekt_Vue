@@ -3,7 +3,7 @@
     <h1>Lista filmów:</h1>
     <button class="AddBtn">Dodaj film</button>
   </div>
-  <!-- <AddMovieForm @add-movie="addMovie" /> -->
+  <AddMovieForm @add-movie="addMovie" />
   <MoviesList @delete-movie="deleteMovieFunction" :movies="this.movies" />
 </template>
 
