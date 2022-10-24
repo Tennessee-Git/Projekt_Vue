@@ -116,9 +116,9 @@
     {
       "id": 6,
       "title": "test1234",
-      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Test.svg",
+      "imageURL": "https://przedszkole.doruchow.pl/wp-content/uploads/2017/08/test.png",
       "length": 123,
-      "label": "test1234",
+      "label": "",
       "value": 6,
       "popularity": 0
     },
