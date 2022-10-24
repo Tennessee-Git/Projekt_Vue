@@ -3,8 +3,9 @@
     <h2>Wpisz informacje o filmie</h2>
     <form @submit.prevent="handleSubmit">
       <div class="form-inputs">
-        <label>Tytuł:</label>
+        <label class="customLabel">Tytuł:</label>
         <input
+          class="customInput"
           v-model="title"
           required
           minlength="5"
@@ -15,8 +16,9 @@
         />
       </div>
       <div class="form-inputs">
-        <label>Link do plakatu:</label>
+        <label class="customLabel">Link do plakatu:</label>
         <input
+          class="customInput"
           v-model="imageURL"
           required
           id="imageURLInput"
@@ -33,8 +35,9 @@
         alt="Podgląd plakatu"
       />
       <div class="form-inputs">
-        <label>Długość(min):</label>
+        <label class="customLabel">Długość(min):</label>
         <input
+          class="customInput"
           v-model="length"
           required
           min="30"
@@ -51,7 +54,7 @@
 </template>
 
 <script>
-import { addMovie, getMovieCount } from "../../api";
+import { addMovie, getNextMovieId } from "../../api";
 
 export default {
   name: "AddMovieForm",
@@ -60,23 +63,22 @@ export default {
       title: "",
       imageURL: "",
       length: null,
-      value: 0,
+      id: 0,
     };
   },
   async created() {
-    this.value = (await getMovieCount()) + 1;
+    this.id = await getNextMovieId();
   },
   methods: {
     handleSubmit() {
       console.log(this.title, this.imageURL, this.length);
       let newMovie = {
-        id: this.value,
+        id: this.id,
         title: this.title,
         imageURL: this.imageURL,
         length: this.length,
         label: this.title,
-        value: this.value,
-        popularity: 0,
+        value: this.id,
       };
       addMovie(newMovie);
       this.$emit("add-movie", newMovie);

@@ -20,7 +20,7 @@ export default {
 .navbarItems {
   background: linear-gradient(
     90deg,
-    rgb(63, 185, 132) 0%,
+    rgb(51, 150, 107) 0%,
     rgb(68, 196, 140) 100%
   );
   height: 70px;

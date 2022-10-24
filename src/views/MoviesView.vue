@@ -28,11 +28,11 @@ export default {
       console.error(err);
     }
   },
-  watch: {
-    movies(val, oldVal) {
-      console.log(val, oldVal);
-    },
-  },
+  // watch: {
+  //   movies(val, oldVal) {
+  //     console.log(val, oldVal);
+  //   },
+  // },
   methods: {
     deleteMovieFunction(id) {
       console.log("Movie to delete: ", id);

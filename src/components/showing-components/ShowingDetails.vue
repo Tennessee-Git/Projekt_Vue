@@ -18,7 +18,11 @@
             Rezerwuj <i class="fas fa-ticket-alt"></i>
           </button>
         </router-link>
-        <button class="ctrl-btn" @click="$emit('delete-showing', id)">
+        <button
+          v-if="showDelete"
+          class="ctrl-btn"
+          @click="$emit('delete-showing', id)"
+        >
           <i class="far fa-trash-alt"></i>
         </button>
       </div>
@@ -35,6 +39,7 @@ export default {
     movieTitle: String,
     roomId: Number,
     availableSeats: Number,
+    showDelete: Boolean,
   },
 };
 </script>

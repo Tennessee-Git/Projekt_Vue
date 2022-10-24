@@ -17,7 +17,7 @@ export default {
   background-color: rgb(63, 185, 132);
   color: #fff;
   text-align: left;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .footer_element {

@@ -44,9 +44,10 @@ code {
 }
 
 .popularity {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
+  display: flex;
+  justify-content: center;
+  vertical-align: top;
+  gap: 50px;
 }
 @media (max-width: 950px) {
   .popularity {
@@ -88,8 +89,9 @@ code {
 .popularity-item {
   display: block;
   max-width: 700px;
-  min-width: 400px;
+  min-width: 500px;
   margin: auto;
+  text-align: center;
 }
 .AddBtn {
   color: white;
@@ -169,19 +171,35 @@ form {
   justify-content: center;
 }
 
-label {
+.customLabel {
   font-size: 1em;
   margin-bottom: 0.5em;
   margin-right: 0.25em;
   color: #222;
 }
 
-input {
+.customInput {
   padding: 10px 10px;
   border-radius: 5px;
   outline: none;
   border: 1px solid #cfcfcf;
   margin-bottom: 0.5rem;
+}
+
+.customSelect {
+  padding: 10px 10px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #cfcfcf;
+  margin-bottom: 0.5rem;
+}
+
+.customSelect select {
+  display: none;
+}
+
+.customSelect * {
+  box-shadow: none;
 }
 
 input::placeholder {

@@ -27,11 +27,11 @@ export default {
       console.err(err);
     }
   },
-  watch: {
-    rooms(val, oldVal) {
-      console.log(val, oldVal);
-    },
-  },
+  // watch: {
+  //   rooms(val, oldVal) {
+  //     console.log(val, oldVal);
+  //   },
+  // },
   methods: {
     deleteRoomFunction(id) {
       console.log("Room to delete: ", id);

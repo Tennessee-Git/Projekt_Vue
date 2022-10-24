@@ -3,7 +3,7 @@
     <h1>Lista seansów:</h1>
     <button class="AddBtn">Dodaj seans</button>
   </div>
-  <AddShowingForm />
+  <AddShowingForm @add-showing="addShowing" />
   <ShowingsList
     @delete-showing="deleteShowingFunction"
     :showings="this.showings"
@@ -29,11 +29,11 @@ export default {
       console.error(err);
     }
   },
-  watch: {
-    showings(val, oldVal) {
-      console.log(val, oldVal);
-    },
-  },
+  // watch: {
+  //   showings(val, oldVal) {
+  //     console.log(val, oldVal);
+  //   },
+  // },
   methods: {
     deleteShowingFunction(id) {
       console.log("Showing to delete: ", id);
