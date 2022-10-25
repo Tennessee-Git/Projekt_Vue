@@ -139,6 +139,8 @@ code {
 
 .form-wrapper {
   width: 600px;
+  height: fit-content;
+  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
