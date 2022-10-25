@@ -1,9 +1,11 @@
 <template>
   <div class="heading">
     <h1>Lista filmów:</h1>
-    <button class="AddBtn">Dodaj film</button>
+    <button class="AddBtn" @click="this.showDialog = true">Dodaj film</button>
   </div>
-  <AddMovieForm @add-movie="addMovie" />
+  <Dialog v-model:visible="showDialog" :modal="true" class="dialog">
+    <AddMovieForm @add-movie="addMovie" />
+  </Dialog>
   <MoviesList @delete-movie="deleteMovieFunction" :movies="this.movies" />
 </template>
 
@@ -17,6 +19,7 @@ export default {
   data() {
     return {
       movies: [],
+      showDialog: false,
     };
   },
   async created() {
@@ -43,6 +46,7 @@ export default {
     addMovie(movie) {
       // console.log("Movie to add: ", movie);
       this.movies = [...this.movies, movie];
+      this.showDialog = false;
     },
   },
   components: { MoviesList, AddMovieForm },

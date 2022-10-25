@@ -1,9 +1,11 @@
 <template>
   <div class="heading">
     <h1>Lista sal kinowych:</h1>
-    <button class="AddBtn">Dodaj salę</button>
+    <button class="AddBtn" @click="this.showDialog = true">Dodaj salę</button>
   </div>
-  <AddRoomForm @add-room="addRoom" />
+  <Dialog v-model:visible="showDialog" :modal="true" class="dialog">
+    <AddRoomForm @add-room="addRoom" />
+  </Dialog>
   <RoomsList @delete-room="deleteRoomFunction" :rooms="this.rooms" />
 </template>
 
@@ -17,6 +19,7 @@ export default {
   data() {
     return {
       rooms: [],
+      showDialog: false,
     };
   },
   async created() {
@@ -41,6 +44,7 @@ export default {
     },
     addRoom(room) {
       this.rooms = [...this.rooms, room];
+      this.showDialog = false;
     },
   },
   components: { RoomsList, AddRoomForm },

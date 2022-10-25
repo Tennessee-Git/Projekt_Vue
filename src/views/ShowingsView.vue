@@ -1,9 +1,11 @@
 <template>
   <div class="heading">
     <h1>Lista seansów:</h1>
-    <button class="AddBtn">Dodaj seans</button>
+    <button class="AddBtn" @click="this.showDialog = true">Dodaj seans</button>
   </div>
-  <AddShowingForm @add-showing="addShowing" />
+  <Dialog v-model:visible="showDialog" :modal="true" class="dialog">
+    <AddShowingForm @add-showing="addShowing" />
+  </Dialog>
   <ShowingsList
     @delete-showing="deleteShowingFunction"
     :showings="this.showings"
@@ -14,11 +16,13 @@
 import { deleteShowing, getShowings } from "../api";
 import ShowingsList from "../components/showing-components/ShowingsList.vue";
 import AddShowingForm from "../components/forms/AddShowingForm.vue";
+
 export default {
   name: "ShowingsView",
   data() {
     return {
       showings: [],
+      showDialog: false,
     };
   },
   async created() {
@@ -42,6 +46,7 @@ export default {
     },
     addShowing(showing) {
       this.showings = [...this.showings, showing];
+      this.showDialog = false;
     },
   },
   components: { ShowingsList, AddShowingForm },
