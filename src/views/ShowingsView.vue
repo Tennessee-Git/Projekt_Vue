@@ -48,6 +48,6 @@ export default {
       this.showDialog = false;
     },
   },
-  components: { ShowingsList, AddShowingForm, VueFinalModal },
+  components: { ShowingsList, AddShowingForm },
 };
 </script>
