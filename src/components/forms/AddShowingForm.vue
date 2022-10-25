@@ -81,6 +81,12 @@ export default {
         seatsTaken: [],
       };
       console.log("Showing to add", newShowing);
+      this.date = "";
+      this.selectedMovie = {};
+      this.selectedRoom = {};
+      this.movies = [];
+      this.rooms = [];
+      this.id = 0;
       // console.error(this.startDate, typeof this.startDate);
       addShowing(newShowing);
       this.$emit("add-showing", newShowing);

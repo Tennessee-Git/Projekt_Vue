@@ -145,7 +145,6 @@ code {
 .form-wrapper {
   width: 600px;
   height: fit-content;
-
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -16,7 +16,6 @@
 import { deleteShowing, getShowings } from "../api";
 import ShowingsList from "../components/showing-components/ShowingsList.vue";
 import AddShowingForm from "../components/forms/AddShowingForm.vue";
-
 export default {
   name: "ShowingsView",
   data() {
@@ -49,6 +48,6 @@ export default {
       this.showDialog = false;
     },
   },
-  components: { ShowingsList, AddShowingForm },
+  components: { ShowingsList, AddShowingForm, VueFinalModal },
 };
 </script>
