@@ -89,11 +89,10 @@ export default {
       this.showing.availableSeats -= 1;
       this.showing.seatsTaken.push(this.selectedSeat);
 
-      console.error(this.showing);
-      console.log(newReservation);
+      // console.error(this.showing);
+      // console.log(newReservation);
       addReservation(newReservation);
-      editShowing(this.showing);
-      this.$router.push("/Seanse");
+      editShowing(this.showing).then(this.$router.push("/Seanse"));
     },
     handleSeatSelect(seatCode) {
       console.log(seatCode);
